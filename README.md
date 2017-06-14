@@ -1,7 +1,31 @@
-改掉了对服务发现组建eureka的使用。（通过代码注释）
+server和client代码中移除了对服务发现组件 eureka 的使用。（通过代码注释）
 
-fork from https://github.com/ExampleDriven/spring-boot-grpc-example.git
-[![Build Status](https://travis-ci.org/ExampleDriven/spring-boot-grcp-example.svg?branch=master)](https://travis-ci.org/ExampleDriven/spring-boot-grcp-example)
+#### gRPC 介绍
+http://blog.jrwang.me/2016/grpc-at-first-view/
+
+#### Spring boot 和 gRPC 集成
+https://github.com/ExampleDriven/spring-boot-grpc-example
+https://github.com/grpc/grpc-java
+
+#### Mac install protobuf
+http://www.jianshu.com/p/213178307bcf
+```shell
+brew install automake
+brew install libtool
+$ git clone https://github.com/google/protobuf.git
+$ cd protobuf
+$ git checkout v3.2.0
+$ ./autogen.sh
+$ ./configure
+$ make
+$ make check
+$ sudo make install
+```
+#### protobuf maven 插件使用
+https://www.xolstice.org/protobuf-maven-plugin/
+
+#### 以下为原 project 的 README.md 内容
+
 ## Overview
 
 Example project to for spring-boot integration wiht gRcp. Additonal to a gRcp client and server it has a traditional Spring MVC rest client using very similar payload. The performance of the two technologies can be compared, JMeter file is included.
